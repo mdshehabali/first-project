@@ -1,0 +1,511 @@
+/*==========================
+        GLOBAL STYLE
+============================*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+body{
+    font-size: 1.6rem;
+    line-height: 1.3;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #222;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+    font-weight: 600;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+img{
+    width: 100%;
+}
+
+
+
+/*==========================
+    REUSEABLE COMPONENTS
+============================*/
+.container{
+    max-width: 117rem;
+    margin: auto;
+}
+section{
+    padding: 12rem 0;
+}
+.btn{
+    width: 20rem;
+    padding: 1.5rem;
+    background: #222;
+    color: #fff;
+    display: inline-block;
+    text-transform: capitalize;
+    text-align: center;
+    transition: all .4s;
+    cursor: pointer;
+    border: .2rem solid #000;
+}
+.btn-full{
+    background: #ff2b4a;
+    border-color: #ff2b4a;
+}
+.btn-full:hover{
+    background: transparent;
+    color: #ff2b4a;
+}
+.section-tittle{
+    margin-bottom: 4.5rem;
+    text-align: center;
+    
+}
+.section-tittle h2{
+    font-size: 4rem;
+}
+.section-tittle p{
+    margin: 1.5rem 0;
+}
+h4{
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+}
+/*==========================
+    HERO SECTION
+============================*/
+#hero{
+    position: relative;
+    min-height: 100vh;
+    background:linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.95)), url(./img/hero.jpg) no-repeat center top / cover;
+
+}
+
+.logo{
+    float: left;  
+   
+}
+nav{
+    padding-top: 4.5rem;
+}
+.menu{
+    float: right;
+    
+  
+}
+.menu a ion-icon{
+    font-size: 4.5rem;
+    color: #fff;
+    border: .1rem solid #fff;
+}
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+#hero h1{
+    font-size: 6.5rem;
+    text-transform: uppercase;
+    margin: 1.5rem 0;
+    color: #fff;
+    display: inline-block;
+}
+
+#hero h1::before{
+    content: '';
+    width: 100%;
+    height: .2rem;
+    background: #fff;
+    display: block;
+
+}
+#hero h1::after{
+    content: '';
+    width: 100%;
+    height: .2rem;
+    background: #fff;
+    display: block;
+
+}
+.hero-content span{
+    font-size: 2rem;
+}
+.next-section{
+    text-align: center;
+   
+}
+.next-section{
+    font-size: 4.5rem;
+    color: #fff;
+    position: absolute;
+    bottom: 4.5rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+.next-section a ion-icon{
+    position: relative;
+    -webkit-animation: arrow 2s ease-in-out infinite;
+            animation: arrow 2s ease-in-out infinite;
+    color: #fff;
+}
+/*==========================
+    STICKY MENU
+============================*/
+nav.uk-sticky-fixed{
+    background: rgba(0, 0, 0, 0.95);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+/*==========================
+    ANIMATION ARROW
+============================*/
+@-webkit-keyframes arrow{
+   0%{
+    top: 1rem;
+   }
+   50%{
+    top: 3rem;
+   }
+   100%{
+    top: 1rem;
+   }
+}
+@keyframes arrow{
+   0%{
+    top: 1rem;
+   }
+   50%{
+    top: 3rem;
+   }
+   100%{
+    top: 1rem;
+   }
+}
+/*==========================
+   HUMBURGER MENU
+============================*/
+.menu-container{
+    width: 0%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+}
+.close-btn a ion-icon{
+    color: #fff;
+    position: absolute;
+    top: 4.5rem;
+    right: 4.5rem;
+    font-size: 4.5rem;
+}
+.menu-item{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+
+}
+.menu-item li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-size:3rem;
+    margin: .5rem 0;
+    display: inline-block;
+    text-decoration: none;
+}
+.menu-item li a:hover{
+    color: #ff2b4a;
+}
+
+
+
+/*==========================
+    ABOUT SECTION
+============================*/
+.ab-grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:4.5rem;
+}
+.ab-grid img{
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+}
+.ab-grid h4{
+    font-size: 1.8rem;
+}
+.ab-grid p{
+    padding: 4.5rem 0;
+}
+
+/*==========================
+    PROCESS ECTION
+============================*/
+#process{
+    background: #f6f6f6;
+}
+.process-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:1rem;
+}
+.process-grid-item{
+    background: #000;
+    color: #fff;
+    padding: 8rem 0;
+    text-align: center;
+}
+#process h4{
+    color: #fff;
+}
+.process-grid-item img{
+    width: 3.5rem;
+}
+.process-grid-item ion-icon{
+    font-size: 4rem;
+}
+.process-grid-item h4{
+    margin-top: 4rem;
+}
+.process-grid-item:nth-child(1){
+    background: #10c6fc;
+}
+.process-grid-item:nth-child(2){
+    background: #835aeb;
+}
+.process-grid-item:nth-child(3){
+    background: #002453;
+}
+.process-grid-item:nth-child(4){
+    background: #ff2b4a;
+}
+.exp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+#exp{
+    background: url(./img/experience.jpg) no-repeat center / cover fixed;
+}
+.exp-grid-item{
+    background: rgba(0, 0, 0, 0.65);
+    color: #fff;
+    padding: 4.5rem 3rem;
+}
+.exp-grid-item h4{
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.exp-grid-item h2{
+    text-transform: uppercase;
+    margin-bottom: 4.5rem;
+    font-size: 2.6rem;
+    color: #fff;
+}
+hr{
+    border: 0;
+    border-bottom: .1rem solid #fff;
+    margin: 3.5rem 0;
+}
+
+.exp-grid-item span{
+    font-size: 1.8rem;
+    margin: 2.3rem 0;
+    display: inline-block;
+}
+/*==========================
+    WORK ECTION
+============================*/
+.work-filter{
+    margin-bottom: 4.5rem;
+    text-align: center;
+}
+.work-filter button{
+    background: #000;
+    color: #fff;
+    padding: 1rem 1.5rem ;
+    text-transform: capitalize;
+    cursor: pointer;
+    border: 0;
+    margin:.5rem 0 ;
+}
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+
+}
+.work-grid-item{
+    height: 27.5rem;
+}
+.work-grid-item img{
+    height: 100%;
+}
+.work-grid-item:nth-child(5) {
+    grid-column: 1/3;
+}
+button.mixitup-control-active{
+    background: #ff2b4a;
+}
+.uk-lightbox{
+    background: rgba(0, 0, 0, 0.65);
+}
+/*==========================
+    TESTMONIAL SECTION
+============================*/
+#testmonial{
+    background: url(./img/testimonial.jpg) no-repeat center top / cover;
+   
+}
+.testmonial-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.qute{
+    width: 6rem;
+}
+.signeture{
+    width: 17rem;
+}
+.testmonial-grid-item p{
+    margin: 4.5rem 0;
+}
+/*==========================
+    CONTACT SECTION
+============================*/
+#contact{
+    background: url(./img/contact.jpg) no-repeat center / cover fixed ;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap:1rem;
+}
+.contact-grid-item:nth-child(1),
+.nested-ct-grid-item{
+    background: rgba(0, 0, 0, 0.95);
+    padding: 3rem 2rem;
+}
+.contact-grid-item h2{
+    font-size: 3rem;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+form input[type="text"],
+form input[type="email"],
+textarea{
+    width: 100%;
+    box-sizing: border-box;
+    border: .1rem solid #fff;
+    background: transparent;
+    font-size: 1.6rem;
+    color: #fff;
+    margin: 1rem 0;
+    padding: 1rem;
+   
+}
+::-webkit-input-placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+::-moz-placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+:-ms-input-placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+::-ms-input-placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+::placeholder{
+    color: #fff;
+    text-transform: capitalize;
+}
+textarea{
+    min-height: 20rem;
+}
+.sub-btn{
+    text-align: right;
+    margin-top: 3rem;
+}
+.nested-ct-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap:1rem;
+    color: #fff;
+}
+/*==========================
+    FOOTER SECTION
+============================*/
+#footer{
+    background: #222222;
+    padding: 1.5rem 0;
+    text-align: center;
+    color: #fff;
+}
+.social-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+   
+
+}
+.social-list li{
+    display: inline-block;
+
+}
+.social-list li a ion-icon{
+    color: #fff;
+    border-right: .1rem solid #fff;
+    padding: 0 .5rem;
+    font-size: 3rem;
+}
+.social-list li:last-child a ion-icon{
+    border-right: 0;
+}
+.social-list li a ion-icon:hover{
+    color: #ff2b4a;
+}
+.up-icon{
+    font-size: 4.5rem;
+   
+    
+}
+.copyright span{
+    color: #ff2b4a;
+}
+.up-icon a ion-icon{
+    color: #fff;
+   
+}
+.up-icon a ion-icon:hover{
+    color: #ff2b4a;
+}
